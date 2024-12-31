@@ -1,0 +1,3 @@
+# TypeScript Type Coercion Leading to Runtime NaN
+
+This example demonstrates a subtle bug in TypeScript where type coercion can lead to unexpected runtime errors that are not caught during compilation. The `add` function is declared to accept two numbers, but we pass a string and a number. While TypeScript allows this, it results in `NaN` at runtime because of JavaScript's loose typing and implicit type conversion.  This highlights a common scenario where TypeScript's static typing doesn't fully prevent all runtime issues.  The solution involves stricter input validation.
